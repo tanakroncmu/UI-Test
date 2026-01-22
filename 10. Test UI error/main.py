@@ -18,9 +18,9 @@ def selectMusic(): ### รับ Command มาจาก def SM1 ():
     ##ส่วนของ Radiobutton ใน window ย่อย
     language = IntVar()     # language - ตั้งเป็นตัวแปรสำหรับใช้ในการรับค่าจาก Radiobutton ทั้ง 3 ตัวเลือกใน  window ย่อย
     language.set(1)         # language ตั้งค่าเริ่มต้นไว้ที่ 1
-    Radiobutton(window2,text="1. The Kid LAROI, Justin Bieber - STAY",variable=language, value=1,command=SendVariable).place(x=20, y=80)
-    Radiobutton(window2,text="2. LISA - BORN AGAIN feat. Doja Cat & RAYE)",variable=language, value=2,command=SendVariable).place(x=20, y=120)
-    Radiobutton(window2,text="3. John Martin - Anywhere For You",variable=language, value=3,command=SendVariable).place(x=20, y=160)
+    Radiobutton(Window2,text="1. The Kid LAROI, Justin Bieber - STAY",variable=language, value=1,command=SendVariable).place(x=20, y=80)
+    Radiobutton(Window2,text="2. LISA - BORN AGAIN feat. Doja Cat & RAYE)",variable=language, value=2,command=SendVariable).place(x=20, y=120)
+    Radiobutton(Window2,text="3. John Martin - Anywhere For You",variable=language, value=3,command=SendVariable).place(x=20, y=160)
 
 def SendVariable(): ### รับ command จาก Radiobutton ทั้ง 3 ตัวเลือกจาก UI ของ window ย่อย
     global language,languageNum
@@ -35,6 +35,7 @@ btb11 = Button(root,text="Select Music", fg="black",command=SM1 , width=15, heig
 #กำหนดขนาด UI ของ root window
 root.geometry("500x700+800+200")
 root.mainloop()
+
 
 
 
