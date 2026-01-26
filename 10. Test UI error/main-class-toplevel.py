@@ -18,7 +18,7 @@ class RadioApp: # Step 3 - เรียกใช้ class run ทั้ง 2 def
         self.r3.place(x=20, y=160)      #PositionRadiobutton3
 
         ButtonWindow2 = tk.Button(window2, text="Show Selection", command=self.show_selection)  #ButtonWindow2 - command และส่งตัวแปร self ไปที ่def show_selection(self)
-        btn.place(x=20, y=200)          #PositionButtonWindow2
+        ButtonWindow2.place(x=20, y=200)          #PositionButtonWindow2
 
     def show_selection(self):   # Step 5 - รับตัวแปร self มาจาก def __init__(self, root)
         print(self.var.get())   #พิมพ์ค่า value ของตัวแปร self
@@ -34,5 +34,6 @@ root = tk.Tk()                       #Root window
 root.geometry("500x700+800+200")    #ขนาดของ Root window
 ButtonRoot = tk.Button(root,text="Select Music", fg="black",command=SM1 , width=15, height=1).place(x=50, y=115) # Step 1 - ปุ่มสำหรับเปิดหน้าต่างย่อยขึ้นมา
 root.mainloop()                     #สร้างลูปไม่สิ้นสุด
+
 
 
